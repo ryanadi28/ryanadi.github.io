@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PT. Putra Pratama</title>
+        <!-- Sertakan Bootstrap CSS dari CDN -->
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <!-- Sertakan Bootstrap JavaScript dan jQuery dari CDN -->
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script
+             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+         <script
+             src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color: #fff;
+                justify-content: center;
+        
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+          .ryan_textm{
+            text-align: center;
+              font-size: 30px;
+              font-style: bold;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              background:rgba(255, 255, 255, 0.624); color: black(0, 0, 0);
+            }
+          .ryan_tc{
+              
+              text-align: center;
+              font-size: 50px;
+              font-style: bold;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              background:rgba(0, 0, 0, 0.438); color: #fff;
+            }
+       
+
+            .ryanbgc{
+
+                padding: 25px;
+                background: url("bgc.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .ryanbc{
+              text-align: center;
+              font-size: 30px;
+              font-style: bold;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              background:rgba(255, 255, 255, 0.624); color: black(0, 0, 0);
+              border-radius: 30px;
+            }
+
+            .ryanbc:hover{
+                background:rgba(255, 255, 255, 0); color: black(0, 0, 0);
+            }
+
+            .ryanbg{
+
+                padding: 25px;
+                background: url("1.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .ryanbg1{
+
+                padding: 25px;
+                background: url("3.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            
+            .ryanbg_content{
+                
+            background-image: url("designer_1.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            margin-right: 0px;
+            background-attachment: scroll;
+            background-size: 500px;
+        }
+            
+            
+    </style>
+    <script>
+        $(document).ready(function(){
+  $("#myBtn").click(function(){
+    $("#myModal").modal({backdrop: true});
+  });
+});
+
+    </script>
+
+<script>
+    function validateForm() {
+        //return true;
+
+        var nama = document.getElementById("nm");
+        var setuju = document.getElementById("switch1");
+        var nn = document.getElementById("p");
+        var cm = document.getElementById("pesan");
+
+        //alert(setuju.checked);
+        //return false;
+        
+        if (cm.value == "") {
+            pesan.focus();
+            alert("Pesan harus diisi harus terisi terlebih dahulu")
+            //alert("Nama harus diisi terlebih dahulu");
+            return false
+        }
+        if (nn.value == "") {
+            nama.focus();
+            alert("Nama harus terisi terlebih dahulu")
+            //alert("Nama harus diisi terlebih dahulu");
+            return false
+        }
+        if (nama.value == "") {
+            nama.focus();
+            alert("Nomor Telepon harus terisi terlebih dahulu")
+            //alert("Nama harus diisi terlebih dahulu");
+            return false
+        }
+
+        if (setuju.checked == false) {
+            alert("Anda Harus Menyetujui");
+            return false;
+        }
+
+    
+
+        if (isNaN(nama.value) ) {
+            nama.focus();
+            alert("Nomor Telepon harus berupa angka");
+            return false;
+        }
+
+        
+
+        if (nama.value.substring(0,3) != "+62" ) {
+            nama.focus();
+            alert("Nomor telepon harus diawali dengan +62 (tanpa spasi)");
+            return false;
+        }
+
+       
+        
+    }
+</script>
+
+    </head>
+
+    
+        <body>
+
+            <!-- Navbar -->
+            <nav
+                class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+                <a class="navbar-brand" href="#">PT. Putra Pratama</a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Beranda</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#services">Layanan</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#about">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" id="myBtn">Kontak</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#sejarah">Sejarah</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+              <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Hubungi Kami</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="container">
+                <h1>PT. Putra Pratama</h1>
+                <form action="file:///C:/Users/Ryan%20Adi%20Putra%20P/Downloads/Web%20A/UTS/page1.html" target="_blank" onsubmit="return validateForm();">
+                    <div class="form-group">
+                        <label for="nm">No Telepon :</label>
+                        <input id="nm" type="text" class="form-control" placeholder="harus diisi" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="p">Nama :</label>
+                        <input id="p" type="text" class="form-control" placeholder="harus diisi" />
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="jenisKelamin">Jenis Kelamin:</label>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="pria" name="jenisKelamin" class="custom-control-input">
+                          <label class="custom-control-label" for="pria">Pria</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                          <input type="radio" id="wanita" name="jenisKelamin" class="custom-control-input">
+                          <label class="custom-control-label" for="wanita">Wanita</label>
+                        </div>
+                      </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">Setujui kebijakan Perusahaan</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Comment:</label>
+                        <textarea class="form-control" rows="5" id="pesan"></textarea>
+                      </div>
+                    <input type="submit" class="btn btn-dark" value="KIRIM">
+                    <div class="alert alert-danger">
+                        <strong>Perhatian !</strong> Kami akan menghubungi nomor Anda 2 jam setelah mengirimkan pesan.
+                      </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+            <!-- Header -->
+            <header
+                class="ryanbgc text-center text-dark"><br><br>
+
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner rounded-sm">
+                        <div class="carousel-item active">
+                            <img src="Berinovasi Untuk Membangun Negeri (3).png"
+                                alt="Los Angeles"
+                                style="width:160vh; border-radius: 30px; height: 60vh;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Berinovasi Untuk Membangun Negeri (4).png"
+                                alt="Chicago"
+                                style="width: 160vh; border-radius: 30px; height: 60vh;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Berinovasi Untuk Membangun Negeri (5).png"
+                                alt="New York"
+                                style="width: 160vh; border-radius: 30px; height: 60vh;">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div>
+                <br>
+               
+            </header>
+
+            <!-- Layanan -->
+            <section id="services" class="ryanbg">
+                <div class="container text-center">
+                    <h2 class="ryan_tc"><b>BISNIS KAMI</b></h2><br>
+
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- Indicators -->
+                        <ul class="carousel-indicators">
+                          <li data-target="#demo" data-slide-to="0" class="active"></li>
+                          <li data-target="#demo" data-slide-to="1"></li>
+                          <li data-target="#demo" data-slide-to="2"></li>
+                        </ul>
+                      
+                        <!-- The slideshow -->
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="PT. Putra pratama media (1).png" alt="Los Angeles">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="PT. Putra pratama media (2).png" alt="Chicago">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="PT. Putra pratama media (3).png" alt="New York">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="PT. Putra pratama media.png" alt="New York">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="rs.png" alt="New York">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="cafe.png" alt="New York">
+                          </div>
+                        </div>
+                      
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                          <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                          <span class="carousel-control-next-icon"></span>
+                        </a>
+                      
+                      </div>
+                </div>
+            </section>
+
+            <!-- Tentang Kami -->
+            <section id="about" class="ryanbg1">
+                <img src="struktur.png" style="width: 170vh;">
+                <div class="jumbotron-fluid mt-5">
+                <div class="row mt-4">
+                    <div class="col-4">
+                        <div class="card p-4">
+                            <div class="row justify-content-center">
+                                <div class="card shadow-lg" style="width:40vh">
+                                    <img class="card-img-top" src="iyan.jpg"
+                                        style="height: 50vh;" alt="Card image">
+                                    <div class="card-body">
+                                        <h4 class="card-title">RYAN ADI PUTRA
+                                            PRATAMA</h4>
+                                        <p class="card-text">Direktur PT. Putra
+                                            Pratama</p>
+                                        <a href="#" class="btn btn-primary">See
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 text-left text-light">
+                        <h1>Sambutan Direktur PT. Putra Pratama</h1>
+                        <p>Assalaamu’alaikum Warahmatullahi Wabarakatuh
+                            <p>
+                                Salam sejahtera bagi kita semua.<br>
+
+                                Selaras dengan perkembangan teknologi terkini
+                                yang
+                                mendukung perkembangan dalam berbagai bidang
+                                usaha, PT.
+                                Putra Pratama
+                                hadir dengan terus bersinergi dan
+                                berinovasi dalam menjalankan berbagai bidang
+                                bisnis yang
+                                mengedepankan kepercayaan (trust), profesional
+                                (professional), dan betanggung jawab
+                                (responsibility).</p>
+                            <p>
+                                Dengan mengusung tema “Berinovasi Untuk Negeri”,
+                                PT.
+                                Putra Pratama
+                                senantiasa memberikan pelayanan yang
+                                terbaik untuk memajukan Negeri dengan terus
+                                melakukan kerjasama antar sektor untuk
+                                mewujudkan
+                                Negeri maju dan dapat bersaing di dunia.</p>
+                            <p>
+                                Kami terus berupaya dalam mengembangkan potensi
+                                dan
+                                kompetensi Sumber Daya Manusia secara beriringan
+                                bersama
+                                dengan perkembangan kemajuan teknologi untuk
+                                memberikan
+                                hasil yang terbaik dan memberikan kepuasan
+                                kepada
+                                stakeholder.</p>
+                            <p>
+                                Kami siap bekerja sama dengan seluruh instansi
+                                dan
+                                sektor yang terkait di dalam berbagai bidang
+                                bisnis baik
+                                swasta maupun pemerintah dengan
+                                penuh tanggung jawab dan saling menguntungkan.</p>
+                            <p>
+                                PT Putra Pratama juga perhatian terhadap
+                                beberapa isu
+                                terkini yang berkaitan dengan isu lingkungan
+                                hidup
+                                secara berkesinambungan dengan mensosialisasikan
+                                dan
+                                mengampanyekan secara langsung di lingkup proyek
+                                maupun
+                                di lingkup masyarakat.</p>
+                            <p>
+                                Guna meningkatkan kinerja yang berkelanjutan PT.
+                                Putra
+                                Pratama menerapkan beberapa sistem manajemen
+                                yang
+                                dituangkan dalam Sistem Manajemen Mutu, Sistem
+                                Manajemen
+                                K3 Konstruksi,Sistem manajemen yang diawasi OJK,
+                                dan
+                                Sistem Manajemen Lingkungan sebagai
+                                bentuk komitmen dalam upaya untuk selalu
+                                memberikan
+                                kepuasan kepada stakeholder serta pelaksanaan
+                                tata
+                                kelola perusahaan yang baik secara menyeluruh.</p>
+
+                            Wassalaamu’alaikum Warahmatullahi Wabarakatuh</p>
+                    </div>
+                </div>
+                <br>
+                <div class="card bg-transparent p-4">
+                    <div class="card-deck">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <p class="ryan_textm">Adam Anugrah</p>
+                                <img src="adam.jpg" style="width: 30vh;"><br>
+                                Manajer PT. Putra Pratama Finance
+                            </div>
+                        </div>
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <p class="ryan_textm">Reyhan Syaifullah</p>
+                                <img src="rayhan.jpg" style="width: 30vh;"><br>
+                                Manajer PT. Putra Pratama Finance
+                            </div>
+                        </div>
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <p class="ryan_textm">Abriliyan Rizky</p>
+                                <img src="Abriliyan.jpg" style="width: 30vh;"><br>
+                                Manajer PT. Putra Indo Pratama
+                            </div>
+                        </div>
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <p class="ryan_textm">Mario Agatta</p>
+                                <img src="Mario.jpg"
+                                    style="width: 30vh; height: 40vh;"><br>
+                                Manajer PT. Putra Pratama Logistic
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="jumbotron-fluid pl-5">
+                    <div class="ryanbg_content">
+                        <br>
+                        <br><br>
+                        <br><br><br>
+                        <h1 >INTEGRITAS TANPA BATAS <br> Pengembangan & Pemeliharaan</h1>
+                        <p style="color: black;">PT. Putra Pratama tidak hanya melakukan suatu pelayanan <br>Kami juga melakukan pengembangan dan pemeliharaan, <br>Setelah menggunakan layanan kami, kami akan terus melakukan pemantauan terhadap produk atau layanan kami.</p>
+                        <p style="color: black;">Hal tersebut berdasarkan visi kami yaitu <br>Integritas Tanpa Batas.</p>
+                        <br>
+                        <br>
+                        <div class="row">
+                      
+                    </div>
+                </div>
+
+                <div class="row m-5">
+                   
+                    <div class="col-5 mt-lg-5">
+                        <img src="Vert.png" width="300px" class="ml-4">
+                    </div>
+
+                    <div class="col-7 p-5">
+                        <br><br><br>
+                        <div>
+                            <h1>Lebih Mudah Dengan <br>Putra Mobile</h1>
+                
+                        </div>
+                        <div>
+                            <div class="ryan_wt">
+                            <p>
+                                Untuk memudahkan layanan komunikasi antar pengguna, PT. Putra Pratama menyediakan layanan Aplikasi mobile yang dinamakan dengan Putra Mobile, Aplikasi tersebut dapat diinstal di Playstore atau IoSstore
+                            </p>
+                                Aplikasi ini gratis, dan dikembangkan serta dibawah pengawasan Tim IT PT. Putra Pratama, PT. Putra Pratama bertanggung jawab atas data pribadi yang anda masukkan, sesuai dengan pasal UU ITE yang telah berlaku.</div>
+                        </div>
+                    
+                       
+                    </div>
+                </div>
+
+                <section id="sejarah">
+                    <div class="card">
+                    <div class="ryan_tc">SEJARAH PT. Putra Pratama</div>
+                    <ul class="nav nav-tabs row gy-4 d-flex pl-5 mt-5 mb-5">
+
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                        
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">2014</button>
+
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>CV. Ryan Abadi</b></p>
+                                      <img src="Ryan abadi.png" style="width: 30vh;"><br>
+                                      Pada tahun 2014, Ryan Adi Putra Pratama mendirikan bisnis yang bernama Ryan Abadi, bisnis tersebut bergerak dibidang finance, dimana memanfaatkan Tabungan dan uang hari raya, CV. Ryan Adi membuka pembayaran online, seperti e-wallet, pembayaran PLN & PDAM. dan lain". Kantor pertama CV. Ryan Abadi terletak dirumah Ryan Adi Putra Pratama itu sendiri.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+
+                          </a>
+                        </li><!-- End Tab 1 Nav -->
+              
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                          
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg2">2016</button>
+
+                            <div class="modal fade bd-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>CV. Ryan Abadi</b></p>
+                                      <img src="Ryan abadi.png" style="width: 30vh;"><br>
+                                      Pada tahun 2016, CV. Ryan Abadi membuka layanan baru, yaitu simpan pinjam, dimana customer dapat melakukan peminjam uang dengan bunga yang kecil dan dapat melakukan penyimpanan uang, CV. Ryan Abadi diawasi langsung oleh OJK dan bertanggung jawab penuh kepada Customer dan Undang-Undang Negara Kesatuan Republik Indonesia. Layanan tersebut masih satu bisnis dengan pembayaran online.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+                          </a>
+                        </li><!-- End Tab 2 Nav -->
+              
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                          
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg3">2018</button>
+
+                            <div class="modal fade bd-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>PT. Trikarya</b></p>
+                                      <img src="Trikarya.png" style="width: 30vh;"><br>
+                                      Tahun 2018, CV, Ryan Abadi berganti nama menjadi PT.Trikarya setelah bekerja sama dengan sahabat Ryan Adi Putra Pratama, yaitu Rayhan Syaifullah dan Adam Anugrah Ilahi, PT. Trikarya berasal dari kata Tri atau tiga, dan karya, yang artinya didirikan oleh 3 orang yang berkarya, Perusahaan ini bergerak dibidang Pengiriman barang atau ekspedisi, pada tahun itu PT. Trikarya hanya melayani ekspedisi di Daerah Jawa Timur, dengan harga yang murah dan cepat sampai, tidak hanya cepat, PT. Trikarya juga memastikan bahwa barang yang diantar aman sampai tujuan tanpa lecet sama sekali.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+                          </a>
+                        </li><!-- End Tab 3 Nav -->
+              
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                          
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg4">2020</button>
+
+                            <div class="modal fade bd-example-modal-lg4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>PT. Trikarya</b></p>
+                                      <img src="Trikarya.png" style="width: 30vh;"><br>
+                                      Tahun 2020 PT. Trikarya membuat beberapa bisnis baru, yaitu Fotogravi&Videografi, dan Cafe, untuk masing-masing bisnis dipegang oleh satu anggota pendiri PT. Trikarya, yaitu Videografi&Fotografi dimanajemen oleh Adam Anugrah Ilahi, untuk Cafe dimanajemen oleh Rayhan Syaifullah, Ekspedisi dan Finance dimanajemen oleh Ryan Adi Putra Pratama. Untuk letak kantor berada pada rumah masing-masing, masing-masing dari bisnis hanya memiliki dua staff, yaitu satu sebagai sekretaris, satu lagi sebagai keuangan.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+                          </a>
+                        </li><!-- End Tab 4 Nav -->
+              
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                          
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg5">2022</button>
+
+                            <div class="modal fade bd-example-modal-lg5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>PT. Putra Pratama</b></p>
+                                      <img src="Putrapratama.png" style="width: 30vh;"><br>
+                                      Pada tahun 2022, PT. Trikarya berganti nama menjadi PT. Putra Pratama, hal tersebut dikarenakan kepentingan internal perusahaan, lalu pada tahun itu juga PT. Putra Pratama membuka bisnis baru, yaitu Rumah Sakit yang bernama RS Putra Pratama, RS Putra Pratama menerapkan rumah sakit kelas A namun harga dibawah harga kelas A, awalnya rumah sakit ini hanya dikhususkan oleh pegawai PT. Putra Pratama, namun karena masyarakat banyak yang datang, akhirnya Rumah sakit Putra Pratama dibuka untuk umum, untuk total pegawai kesehatan ada 20, 4 Dokter Umum, 5 Dokter Spesialis, dan 11 Perawat.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+                          </a>
+                        </li><!-- End Tab 5 Nav -->
+              
+                        <li class="nav-item col-6 col-md-4 col-lg-2">
+                          
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg6">Sekarang</button>
+
+                            <div class="modal fade bd-example-modal-lg6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="card bg-light">
+                                    <div class="card-body text-center">
+                                      <p class="ryan_tc"><b>PT. Putra Pratama</b></p>
+                                      <img src="Putrapratama.png" style="width: 30vh;"><br>
+                                      Dikarenakan banyak bisnis yang dijalankan, supaya memudahkan sistem manajemen, akhirnya PT. Putra Pratama menjadi induk dari perusahaan-perusahaan tersebut, jadi PT. Putra Pratama mempunyai 6 anak perusahaan, yaitu, Finance, Logistik, Media, Cafe, Rumah sakit,  dan Kontraktor.
+                                      
+                                    </div>
+                                  </div>
+                            </div>
+                            </div>
+                            </div>
+                            <br><br><br>
+                          
+                        </li><!-- End Tab 6 Nav -->
+              
+                      </ul>
+                    </div>
+                </div>
+                  </section>
+
+                  <footer class="bg-dark text-white text-center pt-4 pb-2">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                          <h5>About Us</h5>
+                          <p>PT. Putra Pratama merupakan induk perusahaan dari beberapa bisnis, PT. Putra Pratama memiliki tagline yaitu Berinovasi untuk negeri, selain itu PT. Putra Pratama juga memiliki misi From Lokal To Global</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                          <h5>Contact</h5>
+                          <p>Phone: +62 838-5170-8173</p>
+                          <p>Email: putrapratama@gmail.com</p>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                          <h5>Follow Us</h5>
+                          <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                  
+               
+                <!-- Sertakan Bootstrap JavaScript dan jQuery dari CDN -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script
+                    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+                <script
+                    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </body>
+        </div>
+    </html>
